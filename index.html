@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+
+/* ===== BACKGROUND ===== */
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#f6c1d3,#cfd9ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    animation: fadeIn 1s ease;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0px);}
+}
+
+/* ===== MAIN ===== */
+.container{
+    width:1050px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(25px);
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* ===== HEADER ===== */
+.header{
+    text-align:center;
+    margin-bottom:15px;
+    font-weight:600;
+    letter-spacing:2px;
+    opacity:0.6;
+}
+
+/* ===== LAYOUT ===== */
+.layout{
+    display:grid;
+    grid-template-columns:240px 1fr; /*  dọc LEFT */
+    gap:18px;
+	align-items:center;
+}
+
+/* ===== CARD ===== */
+.card{
+    background: rgba(255,255,255,0.6);
+    border-radius:20px;
+    padding:12px;
+    backdrop-filter: blur(15px);
+    transition:0.3s;
+    animation: fadeIn 0.8s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px) scale(1.02);
+}
+
+/* ===== LEFT PROFILE ===== */
+.profile{
+    text-align:left;
+    animation: float 4s ease-in-out infinite;
+	height: fit-content;
+}
+
+.profile h1{
+    margin:8px 0;
+    font-size:20px;
+}
+
+.tag{
+    display:inline-block;
+    background:rgba(255,255,255,0.7);
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    margin:3px;
+}
+
+/* ===== RIGHT ===== */
+.right{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* ===== TOP GRID ===== */
+.top{
+    display:grid;
+    grid-template-columns:220px 1fr 180px;
+    gap:15px;
+}
+
+/* ===== AVATAR ===== */
+.avatar-box{
+    animation: float 5s ease-in-out infinite;
+}
+
+.avatar-box img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* ===== SMALL GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+/* ===== SOCIAL ===== */
+.socials{
+    display:flex;
+    gap:10px;
+}
+
+.socials a{
+    width:38px;
+    height:38px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#ff8fb1;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.socials a:hover{
+    transform:scale(1.25) rotate(8deg);
+}
+
+/* ===== TEXT ===== */
+.small{
+    font-size:11px;
+    opacity:0.7;
+}
+@media (max-width: 900px){
+	.container{
+		width:95%;
+		padding:15px;
+}
+	.layout{
+		grid-template-columns:1fr;
+}
+	.profile{
+		align-self:unset;
+		animation:none;
+}
+	.top{
+		grid-template-columns:1fr;
+	.grid{
+		grid-template-columns:1fr;
+}
+	.avatar-box img{
+		max-height:300px;
+		object-fit:cover;
+}
+h1{
+	font-size:18px;
+}
+h2{
+	font-size:16px;
+}
+h3{
+	font-size:14px;
+}
+	tag{
+		font-size:10px;
+		padding:4px 8px;
+}
+	.social a{
+		width:34px;
+		height:34px;
+		font-size:14px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">BroFromNoWhere</div>
+
+    <div class="layout">
+
+        <!-- LEFT -->
+        <div class="card profile">
+
+            <p class="small">No / VTUBER / Where</p>
+
+            <h1>BroFromNoWhere</h1>
+
+            <p class="small">Im from No Where</p>
+
+            <div>
+                <span class="tag">Live -- PM</span>
+                <span class="tag">Subscriber 1</span>
+                <span class="tag">gà</span>
+            </div>
+
+            <br>
+
+            <div class="card">
+                <p class="small">FEATURED</p>
+                <p>Daily stream at -- PM</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+
+            <div class="top">
+
+                <!-- AVATAR -->
+                <div class="card avatar-box">
+                    <img src="D:\edit\11.png">
+                    <p class="small">No / Vtuber / Where</p>
+                    <p class="small">Last online <b>just now</b></p>
+                    <p class="small">Location <b>Chuồng Gà</b></p>
+                </div>
+
+                <!-- ABOUT -->
+                <div class="card">
+                    <h2>About Me</h2>
+                    <p>Im from No Where</p>
+
+                    <div>
+                        <span class="tag">VTuber</span>
+                        <span class="tag">Sleeping</span>
+                        <span class="tag">gà</span>
+                    </div>
+                </div>
+
+                <!-- GAME -->
+                <div class="card">
+                    <h3>My Game</h3>
+                    <p>Valorant<br>Roblox<br>More</p>
+                </div>
+
+            </div>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>Debut</h3>
+                    <p>02/10/2025</p>
+                </div>
+
+                <div class="card">
+                    <h3>Thích</h3>
+                    <p>Cô ấy</p>
+                </div>
+
+                <div class="card">
+                    <h3>Find Me</h3>
+                    <div class="socials">
+                        <a href="https://www.youtube.com/@YoruAngelKawaii" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a href="  " target="_blank">
+                            <i class="fab fa-discord"></i>
+                        </a>
+
+                        <a href="  " target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Stats</h3>
+                    <iframe
+			src="https://www.youtube.com/subscribe_embed?usegapi=1&channelid=UCtTJGeCQ9Fequ3-WXKOphnw"
+			style="border:none;width:100%; height:105px;">
+		</iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
